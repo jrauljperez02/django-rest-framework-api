@@ -7,8 +7,9 @@ from rest_framework.routers import DefaultRouter
 
 # use to configure a router used in ViewSets
 router = DefaultRouter()
-router.register('hello-viewset',views.HelloViewSet, base_name = 'hello-viewset')
-router.register('profiles',views.UserProfileViewSet)
+router.register('hello-viewset/',views.HelloViewSet, base_name = 'hello-viewset')
+router.register('profiles/',views.UserProfileViewSet)
+router.register('feed/',views.UserProfileFeedViewSet)
 
 
 urlpatterns = [
